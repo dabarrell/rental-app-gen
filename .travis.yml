@@ -6,5 +6,9 @@ deploy:
   provider: heroku
   api_key: 7f4c0b56-7304-40da-bec0-8dfcb9890973
   run: "rake db:create db:migrate"
+  services:
+  - postgresql
+  before_script:
+  - psql -c 'create database my_database_test;' -U postgres
   on:
     rvm: 2.2.3
