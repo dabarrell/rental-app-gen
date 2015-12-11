@@ -5,5 +5,6 @@ rvm:
 deploy:
   provider: heroku
   api_key: 7f4c0b56-7304-40da-bec0-8dfcb9890973
+  run: "rake db:create db:migrate"
   on:
     rvm: 2.2.3
