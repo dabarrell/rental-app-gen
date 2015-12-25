@@ -54,8 +54,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 
-  get 'welcome' => 'pages#home'
-  root 'pages#home'
+  root 'pages#index'
 
   get 'signup'  => 'users#new'
   resources :users
