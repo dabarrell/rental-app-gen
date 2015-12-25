@@ -6,7 +6,6 @@ before_script:
   - psql -c 'create database my_database_test;' -U postgres
 script:
   - RAILS_ENV=test bundle exec rake db:migrate
-  - bundle exec rake db:test:prepare
   - bundle exec rake
 deploy:
   provider: heroku
